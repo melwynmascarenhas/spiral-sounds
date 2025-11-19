@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({ origin: true, credentials: true })); // permissive for demo
 app.use(express.static(path.join(process.cwd(), "public")));
 const PORT = process.env.PORT || 3000;
-const secret = process.env.SPIRAL_SESSION_SECRET || "jellyfish-baskingshark";
+const secret = process.env.SPIRAL_SESSION_SECRET;
 
 app.use(express.json());
 
