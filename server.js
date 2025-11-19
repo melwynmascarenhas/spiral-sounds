@@ -1,4 +1,7 @@
 import express from "express";
+import session from "express-session";
+import dotenv from "dotenv";
+dotenv.config();
 import path from "path";
 import cors from "cors";
 
@@ -6,7 +9,6 @@ import { productsRouter } from "./routes/products.js";
 import { authRouter } from "./routes/auth.js";
 import { meRouter } from "./routes/me.js";
 import { cartRouter } from "./routes/cart.js";
-import session from "express-session";
 
 const app = express();
 app.use(cors({ origin: true, credentials: true })); // permissive for demo
